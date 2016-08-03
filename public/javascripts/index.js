@@ -1,5 +1,14 @@
 $(document).ready(function() {
   
+  /* Track clicks */
+	$( "[data-track='true']").each( function() {
+		var name = $(this).attr('id');
+		$(this).click( function() {
+			appInsights.trackEvent(name);
+		});
+	});
+  
+  /* Submit information */
   var firstname = $("#firstname"), 
       lastname = $("#lastname"), 
       email = $("#email"), 

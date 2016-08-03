@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html>
 	<head>    
-		<title>Microsoft Azure Web App - Welcome</title> 
+		<title>NVDIA GPUs in Azure: The N-Series VMs</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+    <link rel="canonical" href="http://gpu.azure.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="GPUs, GPU, NVDIA, N-series, Azure, VM, VMs, Microsoft, Graphics Processing Unit, Graphics, Compute, Processing" >
+    <meta name="description" content="Introducing NVDIA GPUs in Microsoft Azure: The N-Series VM">
+    
+    <!--FACEBOOK-->
+    <meta property="og:title" content="NVDIA GPUs in Azure: The N-Series VMs" >
+    <meta property="og:site_name" content="NVDIA GPUs in Azure: The N-Series VMs">
+    <meta property="og:url" content="http://gpu.azure.com" >
+    <meta property="og:description" content="Introducing NVDIA GPUs in Microsoft Azure: The N-Series VM" >
+    <meta property="og:image" content="http://gpu.azure.com/images/meta-banner.png" >
+    <meta property="og:type" content="website" >
+    <meta property="og:locale" content="en_US" >
+    
+    <!--TWITTER-->
+    <meta property="twitter:card" content="summary" >
+    <meta property="twitter:title" content="NVDIA GPUs in Azure: The N-Series VMs" >
+    <meta property="twitter:description" content="Introducing NVDIA GPUs in Microsoft Azure: The N-Series VM" >
+    <meta property="twitter:creator" content="@azure" >
+    <meta property="twitter:url" content="http://gpu.azure.com" >
+    <meta property="twitter:image" content="http://gpu.azure.com/images/meta-banner.png" >
 		
 		<!-- add bootstrap stylesheets -->
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- custom stylesheets -->
 		<link rel="stylesheet" href="stylesheets/style.css">
+		
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-75610322-4', 'auto');
+		  ga('send', 'pageview');
+		</script>
+		
+		<!--
+		To collect end-user usage analytics about your application,
+		insert the following script into each page you want to track.
+		Place this code immediately before the closing </head> tag,
+		and before any other scripts. Your first data will appear
+		automatically in just a few seconds.
+		-->
+    <script type="text/javascript">
+      var appInsights=window.appInsights||function(config){
+          function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(s);try{t.cookie=u.cookie}catch(h){}for(t.queue=[],i=["Event","Exception","Metric","PageView","Trace","Dependency"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
+      }({
+          instrumentationKey:"f3368ac4-548f-4b97-b6a2-2ba11839f67f"
+      });
+      
+      window.appInsights=appInsights;
+      appInsights.trackPageView();
+    </script>
 		
 	</head>
 	
@@ -18,15 +71,25 @@
 	<body>
 	  <div class="overlay"></div>
 	  <div class="" style="position:absolute;top:0px;left:50%;transform:translateX(-50%);"><img src="images/microsoft.png" width="160"></div>
+	  <div class="" style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:white;">
+	  	<a href="https://simulation.azure.com" target="_blank" style="color:white" data-track="true" id="link-simulation-page">Engineering Simulation</a> &nbsp; &middot; &nbsp; 
+	  	<a href="https://azure.microsoft.com/en-us/solutions/big-compute/" target="_blank" style="color:white" data-track="true" id="link-bigcompute-page">Big Compute</a> &nbsp; &middot; &nbsp; 
+	  	<a href="https://banking.azure.com" target="_blank" style="color:white" data-track="true" id="link-banking-page">Banking & Capital Markets</a>
+	  </div>
 		<div class="center" style="width:36vw;min-width:360px;max-width:500px;">
 	    <div class="" style="font-size:36px;font-weight:100;color:#00abec;text-align:center;">
 				Microsoft Azure
 			</div>
-			<div class="" style="font-size:20px;margin-top:12px;color:#fff;font-weight:200;">
-				Introducing the N-Series: Azure GPUs
+			<div class="" style="font-size:20px;color:#fff;font-weight:200;text-align:center;">
+				Introducing NVDIA GPUs in Azure
 			</div>
+			<br>
 			<div class="" style="color:white;">
-				If you're interested in previewing the Azure GPUs or want to learn more, please sign up below:
+				If you're interested in the NVIDA GPU powered Azure VMs or want to learn more and stay updated, please sign up below. 
+			</div>
+			<br>
+			<div class="" style="color:white;">
+				For pressing questions, email <a href="mailto:bigcompute@microsoft.com" target="_blank" style="color:#00abex;font-weight:400;" data-track="true" id="email">bigcompute@microsoft.com</a>.
 			</div>
 			<br>
 			<div class="row">
@@ -54,7 +117,7 @@
         </div>
       </div>
       <br>
-      <button class="btn btn-default" id="submit" type="submit">Submit</button>
+      <button class="btn btn-default" id="submit" type="submit" data-track="true">Submit</button>
       <br>
       <br>
       <div class="" id="successLabel">Thank you for your interest in the new Azure N-Series GPU VMs!</div>      
