@@ -5,6 +5,12 @@ $(document).ready(function() {
 		var name = $(this).attr('id');
 		$(this).click( function() {
 			appInsights.trackEvent(name);
+		  ga('send', {
+        hitType: 'event',
+        eventCategory: 'clickable',
+        eventAction: 'click',
+        eventLabel: name
+      });	
 		});
 	});
   
@@ -15,8 +21,6 @@ $(document).ready(function() {
       organization = $("#organization"),
       vminstance = $("#vminstance");
       
-  console.log(vminstance.val());
-  
   firstname.on('input', function(){
     $(this).removeClass("warning");
   });
