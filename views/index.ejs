@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>    
+		<title>Microsoft Azure Web App - Welcome</title> 
+		
+		<!-- add bootstrap stylesheets -->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- custom stylesheets -->
+		<link rel="stylesheet" href="stylesheets/style.css">
+		
+	</head>
+	
+	<!-- load jquery minified js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<!-- load bootstrap minified js -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+	<body>
+	  <div class="overlay"></div>
+		<div class="center" style="width:36vw;min-width:360px;max-width:500px;">
+	    <div class="" style="font-size:36px;font-weight:100;color:#00abec;">
+				Microsoft Azure
+			</div>
+			<div class="" style="font-size:20px;margin-top:12px;color:#fff;font-weight:200;">
+				Introducing the N-Series: Azure GPUs
+			</div>
+			<div class="" style="color:white;">
+				If you're interested in previewing the Azure GPUs or want to learn more, please sign up below:
+			</div>
+			<br>
+			<div class="row">
+			  <div class="col-xs-6"><input id="firstname" class="field form-control" name="firstname" type="text" placeholder="First Name" /></div>
+        <div class="col-xs-6"><input id="lastname" class="field form-control" name="lastname" type="text" placeholder="Last Name" /></div>
+			</div>
+			<br>
+			<div class="row">
+        <div class="col-xs-6"><input id="email" class="field form-control" name="email" type="email" placeholder="Email" required /></div>
+        <div class="col-xs-6"><input id="organization" class="field form-control" name="organization" type="text" placeholder="Organization" /></div>
+			</div>
+			<br>
+			<div class="row">
+			  <div class="col-xs-12">
+          <select id="vminstance" class="field form-control" name="vminstance">
+              <option value="" disabled selected>Select a GPU VM Instance</option>
+              <option value="NC6">NC6 (1 X K80 GPU, 56 GB Memory, 380 GB SSD)</option>
+              <option value="NC12">NC12 (2 X K80 GPU, 112 GB Memory, 680 GB SSD)</option>
+              <option value="NC24">NC24 (4 X K80 GPU, 224 GB Memory, 1.5 TB SSD)</option>
+              <option value="NC24r">NC24r (4 X K80 GPU, 224 GB Memory, 1.5 TB SSD, RDMA)</option>
+              <option value="NV6">NV6 (1 X M60 GPU, 56 GB Memory, 380 GB SSD)</option>
+              <option value="NV12">NV12 (2 X M60 GPU, 112 GB Memory, 680 GB SSD)</option>
+              <option value="NV24">NV24 (4 X M60 GPU, 224 GB Memory, 1.5 TB SSD)</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <button class="btn btn-default" id="submit" type="submit">Subscribe</button>
+      
+		</div>
+		
+		<script src="javascripts/index.js"></script>
+	</body>
+</html>
+	
