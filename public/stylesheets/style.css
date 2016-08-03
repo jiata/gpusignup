@@ -7,6 +7,7 @@ body {
 	min-height: 500px;
 	background-image: url('../images/bg.png');
 	background-size: cover;
+	background-position: right;
   font-weight:200;  
 }
 .overlay {
@@ -31,4 +32,10 @@ body {
   color: white;
   border: 1px solid #00abec;
   width: 100%;
+}
+#successLabel {
+  opacity: 0;
+  color: #00abec;
+  font-size: 16px;
+  text-align: center;
 }

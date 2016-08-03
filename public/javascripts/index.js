@@ -62,10 +62,13 @@ $(document).ready(function() {
       
       $.get('/submit', data)
       .done(function() {
-        alert("Thanks!");
+        $("#successLabel").css("opacity","1");
       })
       .fail(function() {
         alert("Sorry, your information could not be sent. Please try again later.");
+      })
+      .always(function() {
+        $("#submit").prop("disabled", true);  
       });
       
     } else {
