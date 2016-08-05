@@ -27,7 +27,11 @@ function putDocument(path, index, data, cb) {
 
 /* serve the route / */
 router.get('/', function(req, res, next) {
-  res.render('index');
+  if (req.mobile == true) {
+    res.render('index', { mobile: "true" });
+  } else {
+    res.render('index', { mobile: "false" });
+  }
 });
 
 /* serve the endpoint /submit */
