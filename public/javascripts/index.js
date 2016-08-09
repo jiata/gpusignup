@@ -64,6 +64,7 @@ $(document).ready(function() {
   }
   
   $("#submit").click(function(){ 
+    $("#loadingLabel").fadeIn();
     if (validateFields()) {    
       var data = {
         firstname: firstname.val(),
@@ -75,13 +76,15 @@ $(document).ready(function() {
       
       $.get('/submit', data)
       .done(function() {
-        $("#successLabel").css("opacity","1");
+        $("#loadingLabel").hide();
+        $("#successLabel").fadeIn();
       })
       .fail(function() {
         alert("Sorry, your information could not be sent. Please try again later.");
       })
       .always(function() {
         $("#submit").prop("disabled", true);  
+        $("#loadingLabel").hide();
       });
       
     } else {
